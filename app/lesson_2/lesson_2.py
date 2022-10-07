@@ -50,8 +50,8 @@ def get_data(patterns: list):
     file_names = os.listdir('documents/')
     main_data = [patterns]
     for file in file_names:
-        encoding = chardet.detect(open(f'documents/{file}', 'rb').read())['encoding']
-        with open(f'documents/{file}', 'r', encoding=encoding) as f:
+        encoding = chardet.detect(open(f'lesson_2/documents/{file}', 'rb').read())['encoding']
+        with open(f'lesson_2/documents/{file}', 'r', encoding=encoding) as f:
             line = []
             for i in f.read().splitlines():
                 for pattern in patterns:
