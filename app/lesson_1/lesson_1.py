@@ -112,13 +112,13 @@ for line in process.stdout:
 
 '''6 задание'''
 
-with open('test.txt', 'w', encoding='utf-8') as f:
+with open('../lesson_2/test.txt', 'w', encoding='utf-8') as f:
     f.write('сетевое программирование \n')
     f.write('сокет \n')
     f.write('декоратор')
 
 import chardet
-encoding = chardet.detect(open('test.txt', 'rb').read())['encoding']
+encoding = chardet.detect(open('../lesson_2/test.txt', 'rb').read())['encoding']
 
-with open('test.txt', 'r', encoding=encoding) as f:
+with open('../lesson_2/test.txt', 'r', encoding=encoding) as f:
     print(f.read())
